@@ -14,11 +14,7 @@ public struct LayoutEngine {
     for layout in views {
 
       if let view = layout.view {
-        view.hidden = layout.metric.hidden
-      }
-
-      if layout.metric.hidden {
-        continue
+        layout.setHidden(layout.metric.hidden, view)
       }
 
       frame.size = layout.size(insetWidth)
@@ -31,11 +27,12 @@ public struct LayoutEngine {
         case .Right:
           frame.origin.x = width - frame.width - insets.right - layout.insets.right
         }
-        view.frame = frame
+          view.frame = frame
       }
-
-      frame.origin.y += layout.insets.bottom
-      frame.origin.y += frame.size.height
+      if layout.metric.hidden == false {
+        frame.origin.y += layout.insets.bottom
+        frame.origin.y += frame.size.height
+      }
     }
 
     return frame.origin.y + insets.bottom
