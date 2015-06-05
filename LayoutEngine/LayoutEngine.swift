@@ -1,8 +1,8 @@
 import UIKit
 
-struct LayoutEngine {
+public struct LayoutEngine {
 
-  static func stackViews(views: [ViewLayout], metric: ViewMetric = ViewDefaultMetric(), width: CGFloat) -> CGFloat {
+  public static func stackViews(views: [ViewLayout], metric: ViewMetric = ViewDefaultMetric(), width: CGFloat) -> CGFloat {
 
     let insets = metric.insets
     var frame = CGRect(x: 0, y: 0, width: width, height: 0)

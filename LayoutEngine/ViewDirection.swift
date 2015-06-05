@@ -1,5 +1,5 @@
 import UIKit
 
-enum ViewDirection {
+public enum ViewDirection {
   case Left, Right
 }

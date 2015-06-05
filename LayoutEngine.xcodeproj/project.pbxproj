@@ -21,11 +21,6 @@
 		9595C9FC1B20985C00EDFA76 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9595C9F41B20979200EDFA76 /* Quick.framework */; };
 		9595C9FE1B2098C500EDFA76 /* Nimble.framework in Sources */ = {isa = PBXBuildFile; fileRef = 9595C9F31B20979200EDFA76 /* Nimble.framework */; };
 		9595C9FF1B2098C500EDFA76 /* Quick.framework in Sources */ = {isa = PBXBuildFile; fileRef = 9595C9F41B20979200EDFA76 /* Quick.framework */; };
-		9595CA031B209AED00EDFA76 /* LayoutEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95570CAA1B208EA700D672C1 /* LayoutEngine.swift */; };
-		9595CA041B209B1300EDFA76 /* ViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95570CBE1B2092C800D672C1 /* ViewLayout.swift */; };
-		9595CA051B209B8D00EDFA76 /* ViewMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95570CC31B2092D400D672C1 /* ViewMetric.swift */; };
-		9595CA061B209C3400EDFA76 /* ViewDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95570CC01B2092D000D672C1 /* ViewDirection.swift */; };
-		9595CA071B209C3D00EDFA76 /* ViewDefaultMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95570CC71B2092D800D672C1 /* ViewDefaultMetric.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -290,14 +285,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9595CA041B209B1300EDFA76 /* ViewLayout.swift in Sources */,
 				9595C9FE1B2098C500EDFA76 /* Nimble.framework in Sources */,
-				9595CA031B209AED00EDFA76 /* LayoutEngine.swift in Sources */,
 				9595C9FF1B2098C500EDFA76 /* Quick.framework in Sources */,
-				9595CA051B209B8D00EDFA76 /* ViewMetric.swift in Sources */,
 				95570CA11B208E9600D672C1 /* LayoutEngineTests.swift in Sources */,
-				9595CA071B209C3D00EDFA76 /* ViewDefaultMetric.swift in Sources */,
-				9595CA061B209C3400EDFA76 /* ViewDirection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

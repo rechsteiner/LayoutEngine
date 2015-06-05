@@ -1,6 +1,7 @@
 import UIKit
 import Nimble
 import Quick
+import LayoutEngine
 
 class LayoutEngineTests: QuickSpec {
 

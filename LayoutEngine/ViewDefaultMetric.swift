@@ -1,12 +1,12 @@
 import UIKit
 
-struct ViewDefaultMetric: ViewMetric {
+public struct ViewDefaultMetric: ViewMetric {
 
-  let insets: UIEdgeInsets
-  let direction: ViewDirection
-  let hidden: Bool
+  public let insets: UIEdgeInsets
+  public let direction: ViewDirection
+  public let hidden: Bool
 
-  init(insets: UIEdgeInsets = UIEdgeInsets(), direction: ViewDirection = .Left, hidden: Bool = false) {
+  public init(insets: UIEdgeInsets = UIEdgeInsets(), direction: ViewDirection = .Left, hidden: Bool = false) {
     self.insets = insets
     self.direction = direction
     self.hidden = hidden
