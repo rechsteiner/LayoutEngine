@@ -14,8 +14,6 @@
 		95570CC11B2092D000D672C1 /* ViewDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95570CC01B2092D000D672C1 /* ViewDirection.swift */; };
 		95570CC51B2092D400D672C1 /* ViewMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95570CC31B2092D400D672C1 /* ViewMetric.swift */; };
 		95570CC91B2092D800D672C1 /* ViewDefaultMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95570CC71B2092D800D672C1 /* ViewDefaultMetric.swift */; };
-		9595C9F51B20979200EDFA76 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9595C9F31B20979200EDFA76 /* Nimble.framework */; };
-		9595C9F61B20979200EDFA76 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9595C9F41B20979200EDFA76 /* Quick.framework */; };
 		9595C9FA1B20985500EDFA76 /* LayoutEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95570C8E1B208E9600D672C1 /* LayoutEngine.framework */; };
 		9595C9FB1B20985C00EDFA76 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9595C9F31B20979200EDFA76 /* Nimble.framework */; };
 		9595C9FC1B20985C00EDFA76 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9595C9F41B20979200EDFA76 /* Quick.framework */; };
@@ -54,8 +52,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9595C9F51B20979200EDFA76 /* Nimble.framework in Frameworks */,
-				9595C9F61B20979200EDFA76 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,7 +149,6 @@
 				95570C8A1B208E9600D672C1 /* Frameworks */,
 				95570C8B1B208E9600D672C1 /* Headers */,
 				95570C8C1B208E9600D672C1 /* Resources */,
-				9595C9F71B20979E00EDFA76 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -236,21 +231,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9595C9F71B20979E00EDFA76 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
 		9595C9FD1B20986500EDFA76 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
