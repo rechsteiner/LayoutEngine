@@ -9,6 +9,8 @@ public struct LayoutEngine {
     frame = UIEdgeInsetsInsetRect(frame, insets)
     frame.size.height = 0
 
+    let insetWidth = frame.width
+
     for layout in views {
 
       if let view = layout.view {
@@ -19,7 +21,7 @@ public struct LayoutEngine {
         continue
       }
 
-      frame.size = layout.size(frame.size)
+      frame.size = layout.size(insetWidth)
       frame.origin.y += layout.insets.top
 
       if let view = layout.view {

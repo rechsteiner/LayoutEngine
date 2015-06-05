@@ -3,7 +3,7 @@ import UIKit
 public struct ViewLayout {
 
   let view: UIView?
-  let size: (CGSize) -> CGSize
+  let size: (CGFloat) -> CGSize
   var metric: ViewMetric
 
   var direction: ViewDirection {
@@ -22,8 +22,7 @@ public struct ViewLayout {
     }
   }
 
-  public init(view: UIView?, size: (CGSize) -> CGSize, metric: ViewMetric = ViewDefaultMetric()) {
-
+  public init(view: UIView?, size: (CGFloat) -> CGSize, metric: ViewMetric = ViewDefaultMetric()) {
     self.view = view
     self.size = size
     self.metric = metric
