@@ -81,6 +81,18 @@ class LayoutEngineTests: QuickSpec {
           expect(height).to(equal(20))
         }
 
+        it("ignores insets on hidden views") {
+          let firstMetric = ViewDefaultMetric(
+            insets: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10),
+            hidden: true)
+
+          let firstLayout = ViewLayout(view: firstView, metric: firstMetric)
+          let secondLayout = ViewLayout(view: secondView)
+          let height = LayoutEngine.stackViews([firstLayout, secondLayout], width: 320)
+          expect(firstView.hidden).to(beTrue())
+          expect(secondView.frame.origin.y).to(equal(0))
+          expect(height).to(equal(20))
+        }
       }
 
     }
