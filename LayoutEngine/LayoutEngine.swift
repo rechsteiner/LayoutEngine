@@ -16,22 +16,24 @@ public struct LayoutEngine {
       if let view = layout.view {
         layout.setHidden(layout.metric.hidden, view)
       }
+      var viewFrame = frame
 
-      frame.size = layout.size(insetWidth)
-      frame.origin.y += layout.insets.top
+      viewFrame.size = layout.size(insetWidth)
+      viewFrame.origin.y += layout.insets.top
 
       if let view = layout.view {
         switch layout.direction {
         case .Left:
-          frame.origin.x = insets.left + layout.insets.left
+          viewFrame.origin.x = insets.left + layout.insets.left
         case .Right:
-          frame.origin.x = width - frame.width - insets.right - layout.insets.right
+          viewFrame.origin.x = width - viewFrame.width - insets.right - layout.insets.right
         }
-          view.frame = frame
+          view.frame = viewFrame
       }
       if layout.metric.hidden == false {
-        frame.origin.y += layout.insets.bottom
-        frame.origin.y += frame.size.height
+        viewFrame.origin.y += layout.insets.bottom
+        viewFrame.origin.y += viewFrame.size.height
+        frame = viewFrame
       }
     }
 
