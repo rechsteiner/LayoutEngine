@@ -33,16 +33,16 @@ class LayoutEngineTests: QuickSpec {
         }
 
         it("float views to the left") {
-          let firstMetric = ViewDefaultMetric(direction: .Left)
+          let firstMetric = ViewDefaultMetric(direction: .left)
           let firstLayout = ViewLayout(view: firstView, metric: firstMetric)
-          LayoutEngine.stackViews([firstLayout], width: 320)
+          let _ = LayoutEngine.stackViews([firstLayout], width: 320)
           expect(firstView.frame.origin.x).to(equal(0))
         }
 
         it("float views to the right") {
-          let firstMetric = ViewDefaultMetric(direction: .Right)
+          let firstMetric = ViewDefaultMetric(direction: .right)
           let firstLayout = ViewLayout(view: firstView, metric: firstMetric)
-          LayoutEngine.stackViews([firstLayout], width: 320)
+          let _ = LayoutEngine.stackViews([firstLayout], width: 320)
           expect(firstView.frame.origin.x).to(equal(220))
         }
 
@@ -76,7 +76,7 @@ class LayoutEngineTests: QuickSpec {
           let firstLayout = ViewLayout(view: firstView, metric: firstMetric)
           let secondLayout = ViewLayout(view: secondView)
           let height = LayoutEngine.stackViews([firstLayout, secondLayout], width: 320)
-          expect(firstView.hidden).to(beTrue())
+          expect(firstView.isHidden).to(beTrue())
           expect(secondView.frame.origin.y).to(equal(0))
           expect(height).to(equal(20))
         }
@@ -89,7 +89,7 @@ class LayoutEngineTests: QuickSpec {
           let firstLayout = ViewLayout(view: firstView, metric: firstMetric)
           let secondLayout = ViewLayout(view: secondView)
           let height = LayoutEngine.stackViews([firstLayout, secondLayout], width: 320)
-          expect(firstView.hidden).to(beTrue())
+          expect(firstView.isHidden).to(beTrue())
           expect(secondView.frame.origin.y).to(equal(0))
           expect(height).to(equal(20))
         }

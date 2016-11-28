@@ -2,7 +2,7 @@ import UIKit
 
 public struct LayoutEngine {
 
-  public static func stackViews(views: [ViewLayout], metric: ViewMetric = ViewDefaultMetric(), width: CGFloat) -> CGFloat {
+  public static func stackViews(_ views: [ViewLayout], metric: ViewMetric = ViewDefaultMetric(), width: CGFloat) -> CGFloat {
 
     let insets = metric.insets
     var frame = CGRect(x: 0, y: 0, width: width, height: 0)
@@ -23,9 +23,9 @@ public struct LayoutEngine {
 
       if let view = layout.view {
         switch layout.direction {
-        case .Left:
+        case .left:
           viewFrame.origin.x = insets.left + layout.insets.left
-        case .Right:
+        case .right:
           viewFrame.origin.x = width - viewFrame.width - insets.right - layout.insets.right
         }
           view.frame = viewFrame
