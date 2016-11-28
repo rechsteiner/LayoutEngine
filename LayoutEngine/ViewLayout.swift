@@ -2,8 +2,8 @@ import UIKit
 
 public typealias SetHidden = (Bool, UIView) -> Void
 
-func DefaultSetHidden(hidden: Bool, view: UIView) {
-  view.hidden = hidden
+func DefaultSetHidden(_ hidden: Bool, view: UIView) {
+  view.isHidden = hidden
 }
 
 public struct ViewLayout {
@@ -21,7 +21,7 @@ public struct ViewLayout {
     return self.metric.insets
   }
 
-  public init(view: UIView, metric: ViewMetric = ViewDefaultMetric(), setHidden: SetHidden = DefaultSetHidden) {
+  public init(view: UIView, metric: ViewMetric = ViewDefaultMetric(), setHidden: @escaping SetHidden = DefaultSetHidden) {
     self.metric = metric
     self.view = view
     self.setHidden = setHidden
@@ -30,14 +30,14 @@ public struct ViewLayout {
     }
   }
 
-  public init(view: UIView?, size: (CGFloat) -> CGSize, metric: ViewMetric = ViewDefaultMetric(), setHidden: SetHidden = DefaultSetHidden) {
+  public init(view: UIView?, size: @escaping (CGFloat) -> CGSize, metric: ViewMetric = ViewDefaultMetric(), setHidden: @escaping SetHidden = DefaultSetHidden) {
     self.view = view
     self.size = size
     self.metric = metric
     self.setHidden = setHidden
   }
 
-  public init(view: UIView?, size: CGSize, metric: ViewMetric = ViewDefaultMetric(), setHidden: SetHidden = DefaultSetHidden) {
+  public init(view: UIView?, size: CGSize, metric: ViewMetric = ViewDefaultMetric(), setHidden: @escaping SetHidden = DefaultSetHidden) {
     self.view = view
     self.metric = metric
     self.setHidden = setHidden
